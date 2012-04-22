@@ -21,6 +21,11 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('myindex');
 	}
+	
+	public function test()
+	{
+		$this->load->view('mytest');
+	}
 }
 
 /* End of file welcome.php */

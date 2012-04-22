@@ -8,7 +8,8 @@
 	<style type="text/css">
 		.screen_input {
 			background-color: #000000;					   
-			width:382px;height: 244px;
+			width:382px;
+			height: 244px;
   			overflow:hidden;
   			position:relative;
   			display:table-cell;
@@ -24,9 +25,11 @@
 		}
 	</style>
 	<script>
+    $("#progressbar1").progressbar({value:37});
+	
 	$(function(){
 		$(".screen_input").animate({
-			backgroundColor: "#fff",
+			backgroundColor: "#FFFFFF",
 			},1500);
 		$(".apple_logo").animate({
 			 opacity: 1.0,
@@ -36,9 +39,10 @@
 		},{ 
 			duration:4000 ,
 		 	step: function(now, fx) {
-			    $('.screen_input').html(now);
 			},
-			complete:function(){$(".screen_input").html("<H1>梦&nbsp;想&nbsp;站</H1>");}
+			complete:function(){
+				$(".screen_input").css("backgroundColor","#000000");
+				$(".screen_input").html("<div id='welcome_content'></div>");}
 		});		
 	});
 	</script>
